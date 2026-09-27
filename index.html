@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="style.css">
+</head>
+<body>  
+    <nav>
+        <div class="logo">PORTFOLIO</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#clubs">Clubs</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+
+    <div class="hero-number">01 / PORTFOLIO</div>
+
+    <p class="intro">Hello, I'm</p>
+
+    <h1>Nandhini</h1>
+
+    <h2>CSE Student • Developer • Learner</h2>
+
+    <p class="hero-description">
+        I build, learn, and experiment with technology while
+        exploring software development and AI.
+    </p>
+
+</div>
+
+<div class="hero-visual">
+
+    <div class="visual-circle"></div>
+
+    <div class="visual-card">
+        <span>&lt;/&gt;</span>
+        <p>BUILD</p>
+    </div>
+
+    <div class="visual-dot dot-one"></div>
+    <div class="visual-dot dot-two"></div>
+    <div class="visual-dot dot-three"></div>
+
+    <div class="visual-line line-one"></div>
+    <div class="visual-line line-two"></div>
+
+    <div class="visual-label">CSE / 2026</div>
+
+</div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm a Computer Science and Engineering student interested in software development,artificial intelligence,and building practical projects.
+
+            </p>
+            <p>
+                I believe in understanding how things work,not just using them.I'm currently strengthening my skills in programming,DSA,and modern technologies.
+            </p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Smart Task Tracker</h3>
+                <p>
+                    A desktop productivity application built with python and Tkinter to create,organize,prioritize,and track tasks.
+
+                </p>
+                <p>
+                    <strong>Technologies:</strong>
+                    Python-Tkinter-OpenPyXL
+                </p>
+                <a href="https://github.com/nandhinigowda24-ctrl/Task_tracker" target="_blank">View Project</a>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill-category">
+                <strong>Programming Languages:</strong>
+                <span>Python</span>
+                <span>C</span>
+                <span>C++</span>
+            </div>
+            <div class="skill-category">
+                <strong>Python & libraries</strong>
+                <span>NumPy</span>
+                <span>Pandas</span>
+            </div>
+            <div class="skill-category">
+                <strong>GUI Development:</strong>
+                <span>Tkinter</span>
+                <span>OpenPyXL</span>
+            </div>
+            <div class="skill-category">
+                <strong>Currently Learning:</strong>
+                <span>Java</span>
+                <span>DSA</span>
+                <span>C++ STL</span>
+                <span>Web Development</span>
+            </div>
+            <div class="skill-category">
+                <strong>Version Control:</strong>
+                <span>Git</span>
+                <span>GitHub</span>
+            </div>
+        </section>
+        <section id="clubs">
+            <h2>Clubs & Activities</h2>
+            <div class="club-card">
+                <h3>GDG at CIT</h3>
+                <p>
+                   <strong>Role:</strong> Social Media
+                </p>
+                <p>
+                   Manage social media engagement and maintain the club's
+                   LinkedIn presence, while contributing to content and
+                   promotion for developer-focused events, workshops, and hackathons.
+                </p>
+
+                <p>
+                   Hosted a successful hackathon with the team and received
+                   the <strong>Best Team Award</strong>.
+                </p>
+
+
+            </div>
+            <div class="club-card">
+                <h3>Adastra Robotics & Drones Club</h3>
+                <p>
+                    <strong>Role:</strong>Documentation and Curation
+                </p>
+                <p>
+                    Created presentations,maintained the teams's task tracker,and contributed to documentation.Currently working with the team on hackathon-related activities.
+
+                </p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <div class="contact-links">
+                <a href="mailto:nandhinir.25cse@cambridge.edu.in">Email</a>
+                <a href="https://github.com/nandhinigowda24-ctrl" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/nandhini-gowda-69a263371?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+        <footer>
+            <p>© 2026 Nandhini. Built with curiosity and code.</p>
+        </footer>
+    </main>
+    <script>
+    const revealElements = document.querySelectorAll(
+        "#about, .project-card, .skill-category, .club-card, #contact"
+    );
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    revealElements.forEach((element) => {
+        element.classList.add("scroll-reveal");
+        observer.observe(element);
+    });
+</script>
+
+</body>
+</html>
